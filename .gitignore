@@ -1,0 +1,91 @@
+
+
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next.js
+.next/
+out/
+build/
+
+# production
+dist/
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# mac
+.DS_Store
+
+# vscode
+.vscode/
+
+# idea
+.idea/
+
+# coverage
+coverage/
+
+# cache
+.cache/
+turbo/
+
+# uploads / generated content
+uploads/
+generated/
+tmp/
+temp/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# jupyter
+.ipynb_checkpoints/
+
+# ai / ml
+models/
+checkpoints/
+vectorstores/
+chroma_db/
+faiss_index/
+*.faiss
+
+# database
+*.sqlite
+*.db
+
+# docker
+docker-data/
+
+# testing
+playwright-report/
+test-results/
+
+# misc
+*.pem
+*.key
