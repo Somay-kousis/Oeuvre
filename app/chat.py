@@ -19,7 +19,7 @@ retriever = vectorstore.as_retriever(
 )
 
 model = ChatGroq(
-    model="llama-3.3-70b-versatile",
+    model="llama-3.1-8b-instant",
     temperature=0.7,
 )
 
@@ -35,7 +35,7 @@ def format_docs(docs):
 def get_style_context():
     style_docs = vectorstore.similarity_search(
         "presence tone writing style conversational rhythm informal expressive Somay",
-        k=5,
+        k=3,
     )
     return format_docs(style_docs)
 
