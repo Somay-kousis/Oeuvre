@@ -1,4 +1,20 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
 from app.chat import ask
 
-response = ask("What projects has Somay built?")
-print(response)
+app = FastAPI()
+
+
+class AskRequest(BaseModel):
+    question: str
+
+
+@app.get("/")
+def home():
+    return {"status": "Portfolio AI backend is running"}
+
+
+@app.post("/ask")
+def ask_route(request: AskRequest):
+    answer = ask(request.question)
+    return {"answer": answer}

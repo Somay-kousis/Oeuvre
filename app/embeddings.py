@@ -1,6 +1,8 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import JinaEmbeddings
+import os
 
 def get_embeddings():
-    return HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    return JinaEmbeddings(
+        jina_api_key=os.getenv("JINA_API_KEY"),
+        model_name="jina-embeddings-v3"
     )
