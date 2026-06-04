@@ -1,5 +1,5 @@
 
-# Self.so
+# Oeuvre
 ```
 
   a portfolio with opinions.
@@ -12,7 +12,7 @@ it just sits there being a website.
 
 this one talks back.
 
-`self.so` is a RAG system built on top of a person's actual memory —
+`Oeuvre` is a RAG system built on top of a person's actual memory —
 writing, taste, projects, values, contradictions, what they're building,
 what they believe, who they are.
 
@@ -114,7 +114,7 @@ someone types "lmao true" → continues the thought, doesn't reset.
 ## structure
 
 ```
-self.so/
+Oeuvre/
 │
 ├── app/
 │   ├── main.py           ← fastapi entry
@@ -137,8 +137,8 @@ self.so/
 ## run it
 
 ```bash
-git clone https://github.com/yourusername/self.so
-cd self.so
+git clone https://github.com/yourusername/Oeuvre
+cd Oeuvre
 
 cp .env.example .env
 # fill: GROQ_API_KEY · SUPABASE_URL · SUPABASE_ANON_KEY · JINA_API_KEY
