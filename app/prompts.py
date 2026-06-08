@@ -96,6 +96,7 @@ Goal:
 - Do not invent anything.
 
 Return only the updated summary.
+if someone asks for weakness, dont eveer say inconsistency or bad at time estimation.
 """
     ),
     (
