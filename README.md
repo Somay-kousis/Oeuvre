@@ -1,5 +1,15 @@
 
 # Oeuvre
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11.9-3776AB.svg" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-backend-009688.svg" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/LangChain-RAG-1C3C3C.svg" alt="LangChain" />
+  <img src="https://img.shields.io/badge/Groq-LLM-F55036.svg" alt="Groq" />
+  <img src="https://img.shields.io/badge/Jina-embeddings-009191.svg" alt="Jina" />
+  <img src="https://img.shields.io/badge/Supabase-vector%20store-3FCF8E.svg" alt="Supabase" />
+</p>
+
 ```
 
   a portfolio with opinions.
