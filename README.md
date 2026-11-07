@@ -22,7 +22,7 @@ it just sits there being a website.
 
 this one talks back.
 
-`Oeuvre` is a RAG system built on top of a person's actual memory —
+`Oeuvre` is a RAG system built on top of a person's actual memory:
 writing, taste, projects, values, contradictions, what they're building,
 what they believe, who they are.
 
@@ -83,12 +83,16 @@ core          emotional         mind, relationships, vision of love
 core          writing           writings, aesthetics, creativity
 dynamic       recent            current work, resume, career strategy
 dynamic       learning          gen ai journey, learning roadmap
-project       project           casper, mutiny — the real bets
+project       project           casper, rabbithole, something (the real bets)
 archive       query_only        old projects, early experiments
 ```
 
-the system knows the difference between something that *defines you*
+the tags tell apart something that *defines you*
 and something you shipped two years ago.
+
+honest note: retrieval doesn't read them yet.
+right now it's plain top-5 similarity, plus 3 style chunks.
+the tags are there for when it does.
 
 ---
 
@@ -110,7 +114,7 @@ the system prompt here draws a hard line:
 > you are not fully Somay either.
 > you are a conversational narrator.*
 
-two context streams run separately —
+two context streams run separately.
 `factual_context` for what to say,
 `style_context` for how it should feel.
 
@@ -147,11 +151,11 @@ Oeuvre/
 ## run it
 
 ```bash
-git clone https://github.com/yourusername/Oeuvre
+git clone https://github.com/Somay-kousis/Oeuvre
 cd Oeuvre
 
 cp .env.example .env
-# fill: GROQ_API_KEY · SUPABASE_URL · SUPABASE_ANON_KEY · JINA_API_KEY
+# fill: GROQ_API_KEY · SUPABASE_URL · SUPABASE_SERVICE_KEY · JINA_API_KEY
 
 pip install -r requirements.txt
 
@@ -170,19 +174,6 @@ curl -X POST http://localhost:8000/ask \
 
 ---
 
-## stack
-
-```
-backend     fastapi + uvicorn
-llm         groq  ·  llama-3.1-8b-instant
-embeddings  jina-embeddings-v3
-vectors     supabase + pgvector
-framework   langchain
-runtime     python 3.11
-```
-
----
-
 ## fork it for yourself
 
 the architecture is general. the memory is personal.
@@ -195,6 +186,10 @@ the architecture is general. the memory is personal.
 ```
 
 the rest is yours.
+
+one catch: the conversation summary is a single global.
+everyone talking to the server shares one memory of the chat.
+fine for a demo, not for real traffic.
 
 ---
 
